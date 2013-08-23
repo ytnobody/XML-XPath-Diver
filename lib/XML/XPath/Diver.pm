@@ -15,11 +15,20 @@ sub dive {
     wantarray ? @nodes : Class::Builtin->can('OO')->([@nodes]);
 }
 
-sub attr { shift->getAttribute(shift) }
+sub attr { 
+    my ($self, $attr_name) = @_;
+    my $nodeset = $self->find(sprintf('//@%s', $attr_name));
+    my $node = $nodeset->shift;
+    $node->getNodeValue;
+}
 
 sub text { shift->getNodeText(shift || '/')->value }
 
-sub to_string { shift->toString }
+sub to_string { 
+    my $self = shift;
+    my $nodeset = $self->find('/');
+    XML::XPath::XMLParser::as_string($nodeset->shift);
+}
 
 1;
 __END__
@@ -76,7 +85,7 @@ For this reason, It can as following.
 
 =head1 attr
 
-Alias of getAttribute
+Returns string value of attribute that specified.
 
 =head1 text
 
@@ -88,7 +97,7 @@ $xpath is default '/'.
 
 =head1 to_string
 
-Alias of toString
+Returns XML data as string.
 
 =head1 LICENSE
 

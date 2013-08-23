@@ -54,5 +54,16 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/ytnobody/XML-XPath-Diver/issues"
+      },
+      "homepage" : "https://github.com/ytnobody/XML-XPath-Diver",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/ytnobody/XML-XPath-Diver.git",
+         "web" : "https://github.com/ytnobody/XML-XPath-Diver"
+      }
+   },
    "version" : "0.01"
 }

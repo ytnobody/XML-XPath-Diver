@@ -53,7 +53,7 @@ For this reason, It can as following.
 
 # attr
 
-Alias of getAttribute
+Returns string value of attribute that specified.
 
 # text
 
@@ -65,7 +65,7 @@ $xpath is default '/'.
 
 # to\_string
 
-Alias of toString
+Returns XML data as string.
 
 # LICENSE
 
