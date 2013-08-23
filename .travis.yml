@@ -4,3 +4,9 @@ perl:
   - 5.14
   - 5.16
 
+after_success:
+  - cpanm --quiet --notest --skip-satisfied Devel::Cover::Report::Coveralls
+  - cover -delete 
+  - HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,inc" PERL5LIB="lib" prove t/
+  - cover -report coveralls
+
