@@ -44,6 +44,7 @@
          "requires" : {
             "Class::Builtin" : "0",
             "XML::XPath" : "0",
+            "parent" : "0",
             "perl" : "5.008005"
          }
       },
@@ -65,5 +66,5 @@
          "web" : "https://github.com/ytnobody/XML-XPath-Diver"
       }
    },
-   "version" : "0.01"
+   "version" : "0.02"
 }

@@ -6,7 +6,7 @@ use parent 'XML::XPath';
 use XML::XPath::XMLParser;
 use Class::Builtin ();
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 sub dive {
     my ($self, $xpath) = @_;
